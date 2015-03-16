@@ -57,14 +57,14 @@ public class Calculator {
         else if (operation.equals("/"))
                 {
                     if (num2 == 0)
-                        System.out.println("Divided by 0. ERROR!!");
+                        System.out.println("ERROR: Divided by 0.");
                     else
                         System.out.println("Your answer is " + (num1 / num2));
                 }
         
         // When none of the correct operators is selected.
         else 
-        System.out.println(operation + " is not a valid operator!");
+        System.out.println("ERROR: " + operation + " is not a valid operator!");
             }
         
     }
