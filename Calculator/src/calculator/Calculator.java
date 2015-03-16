@@ -6,6 +6,8 @@
 
 package calculator;
 
+import java.util.Scanner;
+
 /**
  *
  * @author class
@@ -16,7 +18,17 @@ public class Calculator {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+       //User Input
+     Scanner keyboard= new Scanner(System.in);
+    
+     //declaring variables
+     double operator;
+     double firstinteger;
+     double secondinteger;
+    
+     //Output enter the operator
+     System.out.println("Enter an operator (+, -, / or *):  ");
+    
     }
     
 }
