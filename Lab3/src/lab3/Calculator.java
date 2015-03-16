@@ -6,6 +6,9 @@
 
 package lab3;
 
+import static java.time.Clock.system;
+import java.util.Scanner;
+
 /**
  *
  * @author class
@@ -17,6 +20,8 @@ public class Calculator {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        Scanner keyboard = new Scanner(System.in);
+        
     }
     
 }
