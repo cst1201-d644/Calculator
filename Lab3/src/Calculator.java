@@ -57,7 +57,7 @@ public class Calculator {
         else if (operation.equals("/"))
                 {
                     if (num2 == 0)
-                        System.out.println("ERROR: Divided by 0.");
+                        System.out.println("ERROR: Cannot divide by 0.");
                     else
                         System.out.println("Your answer is " + (num1 / num2));
                 }
