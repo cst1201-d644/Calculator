@@ -35,7 +35,7 @@ public class Calculator {
                     if (remainder == 0) {
                         System.out.println(result);
                     } else { //fraction exists.
-                        System.out.println(result + " and " + "/" + integer2);
+                        System.out.println(result + " and " + remainder + "/" + integer2);
                     }
                 }
 
