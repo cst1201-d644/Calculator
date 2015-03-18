@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package lab3;
 
 import java.util.Scanner;
@@ -26,26 +25,30 @@ public class Calculator {
         int integer1 = keyboard.nextInt();
         System.out.println("Enter an integer2: ");
         int integer2 = keyboard.nextInt();
+
+        if (operator.equals("+")) {
+            int math1 = integer1 + integer2;
+            System.out.println("Your answer is: " + math1);
+        } else if (operator.equals("-")) {
+            int math2 = integer1 - integer2;
+            System.out.println("Your answer is: " + math2);
+        } else if (operator.equals("*")) {
+            int math3 = integer1 * integer2;
+            System.out.println("Your answer is: " + math3);
+        } else if (operator.equals("/")) {
+            if (integer2 == 0)
+                System.out.println("Your answer is error");
+            else {
+                int math4 = integer1 / integer2;
+                System.out.println("Your answer is: " + math4);
+            }
+        } else {
+            System.out.println("Your operator is invalid");
+        }
         
         
-        int math1 = integer1 + integer2;
-        int math2 = integer1 - integer2;
-        int math3 = integer1 * integer2;
-        int math4 = integer1 / integer2;
         
-        if (operator.equals("+"))
-        System.out.println("Your answer is: " + math1); 
-        
-        else if (operator.equals("-"))
-        System.out.println("Your answer is: " + math2);
-        
-        if (operator.equals("*"))
-        System.out.println("Your answer is: " + math3);
-        
-        else if (operator.equals("/"))
-        System.out.println("Your answer is: " + math4);
-        
-        
+
     }
-    
+
 }
