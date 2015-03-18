@@ -69,10 +69,12 @@ public class Calculator {
                 System.out.println("Your Answer Is: " + num1 / num2);
             } else //
             {
-                System.out.println("Your Answer Is: " + (num1 / num2) + " and " + (num1 % num2) + "/" + num2);
+                System.out.println("Your Answer Is: " + (num1 / num2) + " and "
+                        + (num1 % num2) + "/" + num2);
             }
 
-        } else if (!operations.equals(opert1) && !operations.equals(opert2) && !operations.equals(opert3) && !operations.equals(opert4)) {
+        } else if (!operations.equals(opert1) && !operations.equals(opert2)
+                && !operations.equals(opert3) && !operations.equals(opert4)) {
             System.out.println(operations + " Is Not A Valid Operator!");
         }
     }
