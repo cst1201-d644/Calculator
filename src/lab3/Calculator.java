@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author class
+ * @author Evan Chin
  */
 public class Calculator {
 
@@ -19,8 +19,8 @@ public class Calculator {
     public static void main(String[] args) {
         int num1;
         int num2;
-        
-        String operator;
+
+        String operation;
         String operator1 = "+",
                 operator2 = "-",
                 operator3 = "*",
@@ -29,37 +29,38 @@ public class Calculator {
         Scanner keyboard = new Scanner(System.in);
 
         System.out.println("Enter an operation(+,-,*,/): ");
-        operator = keyboard.next();
+        operation = keyboard.next();
 
-        System.out.println("Enter an integer: ");
+        System.out.println("Enter an integer:");
         num1 = keyboard.nextInt();
 
-        System.out.println("Enter another integer: ");
+        System.out.println("Enter another integer:");
         num2 = keyboard.nextInt();
 
-        if (operator.equals(operator1)) {
-            System.out.println(num1 + num2);
+        if (operation.equals(operator1)) {
+            System.out.println("Answer: " + (num1 + num2));
         }
 
-        if (operator.equals(operator2)) {
-            System.out.println(num1 - num2);
+        if (operation.equals(operator2)) {
+            System.out.println("Answer: " + (num1 - num2));
         }
 
-        if (operator.equals(operator3)) {
-            System.out.println(num1 * num2);
+        if (operation.equals(operator3)) {
+            System.out.println("Answer: " + (num1 * num2));
         }
 
-        if (operator.equals(operator4)) {
-            if (num1 < num2) {
-                System.out.println("0 and ");
-                System.out.println(num1 % num2);
+        if (operation.equals(operator4)) {
             if (num2 == 0) {
-            System.out.println("Division by zero is not possible.");}
+                System.out.println("Divide by zero error!!!");
+            } else if (num1 < num2) {
+                System.out.println("0 and " + (num1 + "/" + num2));
+            } else if (num1 > num2 && num1 % num2 == 0) {
+                System.out.println("Answer: " + num1 / num2);
+            } else {
+                System.out.println("Answer: " + (num1 / num2) + " and " + (num1 % num2) + "/" + num2);
             }
-        }
-        
-            else if (!operator.equals(operator)){
-            System.out.println(operator + " is not a valid operator!");
+        } else if (!operation.equals(operator1) && !operation.equals(operator2) && !operation.equals(operator3) && !operation.equals(operator4)) {
+            System.out.println(operation + " is not a valid operator!");
         }
     }
 }
