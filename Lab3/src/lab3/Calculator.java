@@ -36,19 +36,19 @@ public class Calculator {
             int math3 = integer1 * integer2;
             System.out.println("Your answer is: " + math3);
         } else if (operator.equals("/")) {
-            if (integer2 == 0)
+            if (integer2 == 0) {
                 System.out.println("Your answer is error");
-            else {
+            } else {
                 int math4 = integer1 / integer2;
+                
                 System.out.println("Your answer is: " + math4);
             }
         } else {
             System.out.println("Your operator is invalid");
         }
+        int remainder = integer1 % integer2;
+        if (remainder == 0)// fraction exist
+        else
+            System.out.println()
+      
         
-        
-        
-
-    }
-
-}
