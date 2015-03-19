@@ -46,9 +46,4 @@ public class Calculator {
         } else {
             System.out.println("Your operator is invalid");
         }
-        int remainder = integer1 % integer2;
-        if (remainder == 0)// fraction exist
-        else
-            System.out.println()
-      
         
