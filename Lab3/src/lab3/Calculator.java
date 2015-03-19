@@ -1,7 +1,5 @@
-
 package lab3;
 
-import java.text.DecimalFormat;
 import java.util.Scanner;
 
 /**
@@ -16,63 +14,60 @@ public class Calculator {
         //Assign string variable
         String str1 = "/", str2 = "*", str3 = "+", str4 = "-";
 
-        //formatting numbers upto 2 decimal places
-        DecimalFormat df = new DecimalFormat("#.00");
-
         //Create a Scanner
         Scanner keyboard = new Scanner(System.in);
 
         //Prompt the user to enter operator
-        System.out.println("Please enter an operator: ");
+        System.out.println("Enter an operator: ");
         String operator = keyboard.nextLine();
 
         //Prompt the user to enter number
-        System.out.println("Please enter a number: ");
-        double num1 = keyboard.nextDouble();
+        System.out.println("Enter an integer: ");
+        int num1 = keyboard.nextInt();
 
         //Prompt the user to enter another number
-        System.out.println("Please enter another number: ");
-        double num2 = keyboard.nextDouble();
+        System.out.println("Enter another integer: ");
+        int num2 = keyboard.nextInt();
 
-        if (num2 != 0) {
+        if (operator.equals(str2)) {
 
-            if (operator.equals(str1)) {
+            System.out.println(num1 + "*" + num2 + " = " + (num1 * num2));
 
-                System.out.println(num1 + "/" + num2 + " = " + df.format(num1 / num2));
+        } else if (operator.equals(str3)) {
 
-            } else {
+            System.out.println(num1 + "+" + num2 + " = " + (num1 + num2));
 
-                if (operator.equals(str2)) {
+        } else if (operator.equals(str4)) {
 
-                    System.out.println(num1 + "*" + num2 + " = " + df.format(num1 * num2));
+            System.out.println(num1 + "-" + num2 + " = " + (num1 - num2));
+
+        } else if (operator.equals(str1)) {
+
+            if (num2 != 0) {
+
+                int reminder = num1 % num2;
+
+                if ((reminder == 0)) {
+
+                    System.out.println(num1 + "/" + num2 + " = " + (num1 / num2));
 
                 } else {
 
-                    if (operator.equals(str3)) {
+                    System.out.println(num1 + "/" + num2 + " = " + (num1 / num2) + " and " + reminder + "/" + num2);
 
-                        System.out.println(num1 + "+" + num2 + " = " + df.format(num1 + num2));
-
-                    } else {
-
-                        if (operator.equals(str4)) {
-
-                            System.out.println(num1 + "-" + num2 + " = " + df.format(num1 - num2));
-
-                        } else {
-
-                            System.out.println(operator + " is not a valid operator");
-
-                        }
-
-                    }
                 }
+
+            } else {
+
+                System.out.println("Divide by zero error !");
+
             }
-        
+
         } else {
 
-            System.out.println("Divide by zero error !");
+            System.out.println(operator + " is not a valid operator");
 
         }
-    }
 
+    }
 }
