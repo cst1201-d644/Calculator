@@ -17,66 +17,52 @@ public class Calculator {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        int num1;
-        int num2;
+        //user Input   
+        Scanner sc = new Scanner(System.in);
 
-        // This is The String Operiation ( Here We Have All The Operation) 
-        String operations;
-        String opert1 = "+",
-                opert2 = "-",
-                opert3 = "*",
-                opert4 = "/";
-
-        //This Is Allowing User to input From the KeyBoard  
-        Scanner keyboard = new Scanner(System.in);
-
-        //This is Where User Will be Chosing Any Operation   
-        System.out.println("Please Enter An Operator Here: ");
-        operations = keyboard.next();
-
-        //This is Where User Will Input Any Number That They Want to Choose 
-        //we are using (num1) To represent This  
-        System.out.println("Please Enter An Integer: ");
-        num1 = keyboard.nextInt();
-
-        //This Is Where User Will Input The Number That They Want to use with the number That 
-        //they Type eiailer & we are using (num2) To represent This  
-        System.out.println("Type Another Integer:");
-        num2 = keyboard.nextInt();
-
-        //This is Where user Will get Answer If they have selected "+"operand
-        if (operations.equals(opert1)) {
-            System.out.println("Your Answer Is: " + (num1 + num2));
+        //Declaring variables
+        int firstinteger;
+        int secondinteger;
+        String operand;
+        String sum = "+", rest = "-", multi = "*", division = "/";
+        //User input the operator       
+        System.out.println("Enter an operator: ");
+        operand = sc.next();
+        //User input the any number
+        System.out.println("Enter an integer: ");
+        firstinteger = sc.nextInt();
+        //User input a second number
+        System.out.println("Enter another integer: ");
+        secondinteger = sc.nextInt();
+        //add your inputs
+        if (operand.equals(sum)) {
+            System.out.println(firstinteger + secondinteger);
         }
-
-        //This is Where user Will get Answer If they have selected "-"operand
-        if (operations.equals(opert2)) {
-            System.out.println("Your Answer Is: " + (num1 - num2));
+        //substract your inputs
+        if (operand.equals(rest)) {
+            System.out.println(firstinteger - secondinteger);
         }
-
-        //This is Where user Will get Answer If they have selected "*"operand
-        if (operations.equals(opert3)) {
-            System.out.println("Your Answer Is: " + (num1 * num2));
+        //multiplicate your inputs
+        if (operand.equals(multi)) {
+            System.out.println(firstinteger * secondinteger);
         }
-        //This is where user will get answer if they have seleceted "/"operand 
-        // And the different result that this operand can display
-        if (operations.equals(opert4)) {
-            if (num2 == 0) {
-                System.out.println("Divide by zero error!!!");
-            } else if (num1 < num2) {
-                System.out.println("0 and " + (num1 + "/" + num2));
-            } else if (num1 > num2 && num1 % num2 == 0) {
-                System.out.println("Your Answer Is: " + num1 / num2);
-            } else //
-            {
-                System.out.println("Your Answer Is: " + (num1 / num2) + " and "
-                        + (num1 % num2) + "/" + num2);
+        //divide your inputs but it has some conditions
+        if (operand.equals(division)) {
+            if (secondinteger == 0) {
+                System.out.println("Divide by zero error!");
+            } else if (firstinteger < secondinteger) {
+                System.out.println("0 and " + (firstinteger + "/" + secondinteger));
+            } else if (firstinteger > secondinteger && firstinteger % secondinteger == 0) {
+                System.out.println(firstinteger / secondinteger);
+            } else {
+                System.out.println((firstinteger / secondinteger) + " and "
+                        + (firstinteger % secondinteger) + "/" + secondinteger);
             }
 
-        } else if (!operations.equals(opert1) && !operations.equals(opert2)
-                && !operations.equals(opert3) && !operations.equals(opert4)) {
-            System.out.println(operations + " Is Not A Valid Operator!");
+        } else if (!operand.equals(sum) && !operand.equals(rest)
+                && !operand.equals(multi) && !operand.equals(division)) {
+            System.out.println(operand + " is not a valid operator!");
         }
-    }
 
+    }
 }
