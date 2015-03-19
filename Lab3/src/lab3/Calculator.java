@@ -12,7 +12,7 @@ public class Calculator {
     public static void main(String[] args) {
 
         //Assign string variable
-        String str1 = "/", str2 = "*", str3 = "+", str4 = "-";
+        String str1 = "+", str2 = "-", str3 = "*", str4 = "/";
 
         //Create a Scanner
         Scanner keyboard = new Scanner(System.in);
@@ -29,19 +29,19 @@ public class Calculator {
         System.out.println("Enter another integer: ");
         int num2 = keyboard.nextInt();
 
-        if (operator.equals(str2)) {
-
-            System.out.println(num1 + "*" + num2 + " = " + (num1 * num2));
-
-        } else if (operator.equals(str3)) {
+        if (operator.equals(str1)) {
 
             System.out.println(num1 + "+" + num2 + " = " + (num1 + num2));
 
-        } else if (operator.equals(str4)) {
+        } else if (operator.equals(str2)) {
 
             System.out.println(num1 + "-" + num2 + " = " + (num1 - num2));
 
-        } else if (operator.equals(str1)) {
+        } else if (operator.equals(str3)) {
+
+            System.out.println(num1 + "*" + num2 + " = " + (num1 * num2));
+
+        } else if (operator.equals(str4)) {
 
             if (num2 != 0) {
 
