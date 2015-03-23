@@ -25,22 +25,24 @@ public class Calculator {
         System.out.println("Enter an integer:");
         int integer2 = keyboard.nextInt();
 
-        int math1 = integer1 + integer2;
-        int math2 = integer1 - integer2;
-        int math3 = integer1 * integer2;
-        int math4 = integer1 / integer2;
+       
 
         if (operator.equals("+")) {
-            System.out.println("The answer is: " + math1);
-        } else if (operator.equals("-")) {
-            System.out.println("The answer is: " + math2);
+             int math1 = integer1 + integer2;
+            System.out.println("The answer is: " + math1); } 
+        
+      else  if (operator.equals("-")) {
+            int math2 = integer1 - integer2;
+            System.out.println("The answer is: " + math2);}
 
-            if (operator.equals("*")) {
-                System.out.println("The answer is: " + math3);
-            } else if (operator.equals("/")) {
-                System.out.println("The answer is: " + math4);
-            }
-        }
-    }
-
-}
+       else if (operator.equals("*")) {
+                 int math3 = integer1 * integer2;
+                System.out.println("The answer is: " + math3); } 
+        
+       else if (operator.equals("/")) {
+                if (integer2==0)
+                {System.out.println("error!");}
+             else {int math4 = integer1 / integer2;
+        System.out.println("The answer is: " + math4);}
+        
+       }}}
