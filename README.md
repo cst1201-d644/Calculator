@@ -1,2 +1,2 @@
 # Calculator
-The calculator lab.
+The number calculator lab.
